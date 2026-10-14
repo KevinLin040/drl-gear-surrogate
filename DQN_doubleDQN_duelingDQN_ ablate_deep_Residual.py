@@ -17,7 +17,7 @@ from collections import Counter  # Used for step distribution statistics
 # ------------------------------
 try:
     optimized_rf_model = joblib.load(
-        r'D:\興大\113博士資格考4\experiment_2\experiment_2\random_forest_model\optimized_rf_model_0116.pkl'
+        r'surrogate_model\random_forest_best_model.pkl'
     )
     print("Random Forest model loaded successfully!")
 except FileNotFoundError:
@@ -490,8 +490,8 @@ def train_dqn(env, num_episodes=30, batch_size=128, gamma=0.90,
 # ------------------------------
 if __name__ == "__main__":
     # File paths for saving Replay Buffer and model weights
-    replay_buffer_save_path = r"D:\興大\113博士資格考4\experiment_2\experiment_2\Complete_model\replay_buffer_ablation.pkl"
-    model_save_path = r"D:\興大\113博士資格考4\experiment_2\experiment_2\Complete_model\ablation_model.pt"
+    replay_buffer_save_path = r"Complete_model\duelingDQN\replay_buffer_ablation.pkl"
+    model_save_path = r"Complete_model\duelingDQN\ablation_model.pt"
 
     # Select execution mode and model variant
     mode = input("Select execution mode (train: t, predict: p): ").strip().lower()
@@ -544,7 +544,7 @@ if __name__ == "__main__":
 
     if mode == 't':
         # Training Mode
-        training_folder = r"D:\興大\113博士資格考4\experiment_2\experiment_2\data_set_RF_DD_train"
+        training_folder = r"data_set_RF_DD_train"
         csv_files = glob.glob(os.path.join(training_folder, "*.csv"))
         if len(csv_files) == 0:
             print("No CSV files found. Please verify the folder path.")
@@ -669,7 +669,7 @@ if __name__ == "__main__":
 
     elif mode == 'p':
         # Prediction / Inference Mode
-        input_folder = r"D:\興大\113博士資格考4\experiment_2\experiment_2\data_set_RF_DD_test"
+        input_folder = r"data_set_RF_DD_test"
         input_files = glob.glob(os.path.join(input_folder, "*.csv"))
         if not input_files:
             print(f"No CSV files found in directory: {input_folder}")
