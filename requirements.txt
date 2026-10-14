@@ -1,0 +1,17 @@
+# Core Scientific Computing and Data Processing
+numpy>=1.22.0
+pandas>=1.4.0
+
+# Machine Learning and Model Serialization
+scikit-learn>=1.0.0
+joblib>=1.1.0
+
+# Gradient Boosting Frameworks (Required by surrogate_comparison_optimization.py)
+xgboost>=1.6.0
+lightgbm>=3.3.0
+
+# Deep Learning and Reinforcement Learning (Required by DQN models)
+torch>=2.0.0
+
+# Visualization and Plotting
+matplotlib>=3.5.0
