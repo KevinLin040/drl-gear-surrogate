@@ -31,7 +31,6 @@ Experimental results show an optimization success rate of **92.0%** and reduce t
 ├── data_set_RF_DD_test/                            # Gear test profiles and datasets for policy evaluation (CSV)
 ├── data_set_RF_DD_train/                           # Industrial gear measurement datasets for DRL training (CSV)
 ├── surrogate_model/                                # Surrogate environment module and workspace
-│   ├── model_outputs_grouped/                      # Surrogate evaluation metrics, search results, and output figures
 │   ├── processed_data/                             # Preprocessed gear measurement transition samples for training (CSV)
 │   └── surrogate_comparison_optimization.py        # Surrogate model benchmarking and hyperparameter optimization
 ├── DQN_doubleDQN_duelingDQN_ablate_deep_Residual.py # Main script for DRL policy training, ablation, and inference
