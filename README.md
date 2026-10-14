@@ -27,9 +27,13 @@ Experimental results show an optimization success rate of **92.0%** and reduce t
 ## 📁 Repository Structure
 
 ```text
-├── processed_data/                             # Preprocessed gear measurement datasets (CSV)
-├── model_outputs_grouped/                      # Training outputs, metrics, and serialized models
-├── surrogate_comparison_optimization.py        # Surrogate model benchmark and hyperparameter tuning
-├── DQN_doubleDQN_duelingDQN_ablate.py          # DRL agent training, ablation study, and inference
-├── requirements.txt                            # Python dependencies
-└── README.md                                   # Project documentation
+├── Complete_model/                                 # Trained DRL model checkpoints and saved replay buffer files
+├── data_set_RF_DD_test/                            # Gear test profiles and datasets for policy evaluation (CSV)
+├── data_set_RF_DD_train/                           # Industrial gear measurement datasets for DRL training (CSV)
+├── surrogate_model/                                # Surrogate environment module and workspace
+│   ├── model_outputs_grouped/                      # Surrogate evaluation metrics, search results, and output figures
+│   ├── processed_data/                             # Preprocessed gear measurement transition samples for training (CSV)
+│   └── surrogate_comparison_optimization.py        # Surrogate model benchmarking and hyperparameter optimization
+├── DQN_doubleDQN_duelingDQN_ablate_deep_Residual.py # Main script for DRL policy training, ablation, and inference
+├── requirements.txt                                # Python package dependencies
+└── README.md                                       # Project documentation
